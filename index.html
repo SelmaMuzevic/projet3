@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do</title>
+</head>
+
+<body>
+
+    <h1>To Do List</h1>
+
+    <form action="index.html" method="GET">
+        <fieldset>
+
+            <label for="title">TITLE :</label>
+            <input type="text" name="nom" id="nom" />
+        </fieldset>
+
+        <fieldset>
+            <label for="liste">LISTE :</label>
+            <input type="text" name="prenom" id="prenom">
+        </fieldset>
+        <input type="submit" id="button" value="Submit" />
+    </form>
+
+    <div></div>
+
+    <script>
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            let nom = document.querySelector("#nom").value;
+            let prenom = document.querySelector("#prenom").value;
+            let toto = document.querySelector("div").textContent;
+
+            let div = document.querySelector("div");
+            // div.textContent = nom + prenom + toto;
+
+            let balise = document.createElement("p");
+            balise.textContent = nom + " " + prenom;
+            div.appendChild(balise);
+
+            let button = document.createElement("button");
+            button.textContent = "delete";
+            balise.appendChild(button);
+            button.addEventListener("click", function(e) {
+                e.preventDefault();
+                div.removeChild(balise);
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
