@@ -13,7 +13,7 @@
 
     <h1>To Do List</h1>
 
-    <form action="index.html" method="">
+    <form action="#" method="POST">
         <fieldset>
 
             <label for="title">TITLE :</label>
@@ -48,13 +48,26 @@
             let button = document.createElement("button");
             button.textContent = "delete";
             balise.appendChild(button);
+
             button.addEventListener("click", function(e) {
                 e.preventDefault();
                 div.removeChild(balise);
-
             });
-
         });
+        for (let i = 0; i < table.length; i++) {
+
+            let tr = document.createElement("tr");
+            let tdIndex = document.createElement("td");
+            let tdValeur = document.createElement("td");
+
+            tdIndex.textContent = i;
+            tdValeur.textContent = table[i];
+
+            tr.appendChild(tdIndex);
+            tr.appendChild(tdValeur);
+
+            document.getElementById("affichage").appendChild(tr);
+        }
     </script>
 </body>
 
