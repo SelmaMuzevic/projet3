@@ -14,30 +14,34 @@
 <body>
     <header>
         <h1>Liste To Do</h1>
-
     </header>
+
     <main>
         <form action="#" method="POST">
-            <input type="text" name="nom" id="nom" />
-            <input type="submit" id="button" value="Submit" />
+
+            <input type="text" id="myInput" placeholder="Title..">
+            <button type="button" onclick="todoList()">Add Item</button>
         </form>
         <ul>
             <li>
                 <input type="checkbox">
                 <p>texte</p>
-                <button>X</button>
             </li>
+
             <li>
                 <input type="checkbox">
                 <p>texte</p>
-                <button>X</button>
             </li>
         </ul>
+
     </main>
+
     <footer>
         <p>Double click pour editer la liste</p>
         <p>Click sur un element si veut effacer</p>
     </footer>
+
+    <script src="todolist2.js"></script>
 
 
 </body>
