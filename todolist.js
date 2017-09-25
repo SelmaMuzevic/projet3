@@ -1,6 +1,5 @@
 "use strict";
 
-
 let form = document.querySelector("form");
 form.addEventListener("submit", function(e) {
     let title = document.querySelector("#title").value;
@@ -24,6 +23,7 @@ form.addEventListener("submit", function(e) {
     h2.addEventListener("dblclick", function() {
         h2.contentEditable = "true";
     });
+
     button.addEventListener("click", function() {
         let div = document.querySelector('.liste');
         div.removeChild(h2);
